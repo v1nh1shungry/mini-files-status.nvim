@@ -65,6 +65,8 @@ local function update_git_status()
     "git",
     "-c",
     "status.relativePaths=false",
+    "-c",
+    "status.branch=false",
     "status",
     "--short",
   }, { text = true }, function(out)
